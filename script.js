@@ -70,7 +70,9 @@ h1 { font-size: 1.5rem; }
     margin-bottom: 2rem;
 }
 
-.form-group { margin-bottom: 1.5rem; }
+.form-group {
+    margin-bottom: 1.5rem;
+}
 
 label {
     display: block;
