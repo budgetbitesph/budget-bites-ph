@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Bites PH | Smart Meal Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <h1>🍲 Budget Bites PH</h1>
+            <button id="theme-toggle" class="btn-outline">🌙 Dark Mode</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Healthy Filipino Meals on a Budget</h2>
+            <p>Plan your weekly meals, track your expenses, and discover nutritious recipes tailored to your household and wallet.</p>
+        </section>
+
+        <section class="card input-section">
+            <h3>Meal Plan Setup</h3>
+            <form id="planner-form">
+                <div class="form-group">
+                    <label for="people">Number of people in household:</label>
+                    <input type="number" id="people" min="1" max="20" value="2" required>
+                </div>
+                <div class="form-group">
+                    <label for="budget">Total Daily Food Budget (PHP):</label>
+                    <input type="number" id="budget" min="100" step="50" value="500" required>
+                </div>
+                <div class="form-group">
+                    <label for="diet">Dietary Preference:</label>
+                    <select id="diet">
+                        <option value="any">Any (Balanced)</option>
+                        <option value="healthy">Healthy / Low-Calorie</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="high-protein">High Protein</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Generate Meal Plan</button>
+            </form>
+        </section>
+
+        <section id="results" class="hidden">
+            <div class="budget-dashboard card">
+                <h3>💰 Budget Overview</h3>
+                <div class="budget-grid">
+                    <div class="budget-item">
+                        <h4>Daily Budget</h4>
+                        <p id="calc-daily-budget">₱0.00</p>
+                    </div>
+                    <div class="budget-item">
+                        <h4>Est. Daily Cost</h4>
+                        <p id="calc-daily-cost">₱0.00</p>
+                    </div>
+                    <div class="budget-item">
+                        <h4>Remaining Daily</h4>
+                        <p id="calc-remaining" class="highlight">₱0.00</p>
+                    </div>
+                    <div class="budget-item">
+                        <h4>Weekly Total Cost</h4>
+                        <p id="calc-weekly-cost">₱0.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="meal-plan-container">
+                <h3>📅 Your 7-Day Meal Plan</h3>
+                <div id="meal-grid" class="meal-grid">
+                    </div>
+            </div>
+            
+            <button id="print-btn" class="btn-secondary" onclick="window.print()">🖨️ Print / Save Plan</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Budget Bites PH. Designed for healthy and affordable Filipino eating.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
