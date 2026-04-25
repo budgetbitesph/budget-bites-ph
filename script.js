@@ -1,44 +1,18 @@
-// --- 1. Comprehensive Database of Filipino Recipes (NEW OBJECT FORMAT) ---
+// --- Database of Filipino Recipes ---
 const recipeDB = [
-    // 🥣 Breakfasts
-    { name: "Tortang Talong", type: "breakfast", tags: ["vegetarian", "healthy", "any"], costPerServing: 30, calories: "150 kcal", prepTime: "20 mins", method: "Pan-fry", ingredients: ["Eggplant", "Eggs", "Salt", "Oil"] },
+    { name: "Tortang Talong", type: "breakfast", tags: ["vegetarian", "healthy", "any"], costPerServing: 30, calories: "150 kcal", prepTime: "20 mins", method: "Grill and fry", ingredients: ["Eggplant", "Eggs", "Salt", "Oil"] },
     { name: "Oatmeal with Mango", type: "breakfast", tags: ["vegetarian", "healthy", "any"], costPerServing: 40, calories: "220 kcal", prepTime: "10 mins", method: "Boil", ingredients: ["Oats", "Ripe Mango", "Milk/Water"] },
     { name: "Tapsilog", type: "breakfast", tags: ["high-protein", "any"], costPerServing: 65, calories: "450 kcal", prepTime: "15 mins", method: "Fry", ingredients: ["Beef Tapa", "Garlic Rice", "Egg"] },
-    { name: "Pandesal at Itlog", type: "breakfast", tags: ["vegetarian", "any"], costPerServing: 25, calories: "250 kcal", prepTime: "5 mins", method: "Assemble", ingredients: ["Pandesal", "Egg", "Butter"] },
-    { name: "Arroz Caldo", type: "breakfast", tags: ["healthy", "high-protein", "any"], costPerServing: 40, calories: "300 kcal", prepTime: "30 mins", method: "Boil", ingredients: ["Rice", "Chicken", "Ginger", "Garlic"] },
-    { name: "Champorado", type: "breakfast", tags: ["vegetarian", "any"], costPerServing: 35, calories: "350 kcal", prepTime: "25 mins", method: "Boil", ingredients: ["Glutinous Rice", "Cocoa Tablea", "Milk", "Sugar"] },
-    { name: "Bangus Silog", type: "breakfast", tags: ["high-protein", "healthy", "any"], costPerServing: 70, calories: "400 kcal", prepTime: "20 mins", method: "Fry", ingredients: ["Daing na Bangus", "Garlic Rice", "Egg"] },
-
-    // 🍲 Lunches
-    { name: "Ginisang Munggo", type: "lunch", tags: ["vegetarian", "healthy", "any"], costPerServing: 35, calories: "210 kcal", prepTime: "45 mins", method: "Simmer", ingredients: ["Mung beans", "Spinach", "Garlic", "Onion"] },
-    { name: "Chicken Tinola", type: "lunch", tags: ["healthy", "high-protein", "any"], costPerServing: 55, calories: "280 kcal", prepTime: "40 mins", method: "Boil", ingredients: ["Chicken cuts", "Sayote", "Malunggay", "Ginger"] },
+    { name: "Ginisang Munggo", type: "lunch", tags: ["vegetarian", "healthy", "any"], costPerServing: 35, calories: "210 kcal", prepTime: "45 mins", method: "Simmer", ingredients: ["Mung beans", "Spinach/Malunggay", "Garlic", "Onion", "Tomatoes"] },
+    { name: "Chicken Tinola", type: "lunch", tags: ["healthy", "high-protein", "any"], costPerServing: 55, calories: "280 kcal", prepTime: "40 mins", method: "Boil/Simmer", ingredients: ["Chicken cuts", "Chayote", "Malunggay", "Ginger", "Broth"] },
     { name: "Pork Sinigang", type: "lunch", tags: ["high-protein", "any"], costPerServing: 70, calories: "350 kcal", prepTime: "50 mins", method: "Boil", ingredients: ["Pork", "Kangkong", "Radish", "Tamarind Base"] },
-    { name: "Ginisang Sayote", type: "lunch", tags: ["vegetarian", "healthy", "any"], costPerServing: 30, calories: "150 kcal", prepTime: "20 mins", method: "Sauté", ingredients: ["Sayote", "Garlic", "Onion", "Pork Giniling (opt)"] },
-    { name: "Chicken Adobo", type: "lunch", tags: ["high-protein", "any"], costPerServing: 60, calories: "380 kcal", prepTime: "35 mins", method: "Simmer", ingredients: ["Chicken", "Soy Sauce", "Vinegar", "Garlic"] },
-    { name: "Fish Paksiw", type: "lunch", tags: ["healthy", "any"], costPerServing: 50, calories: "200 kcal", prepTime: "25 mins", method: "Simmer", ingredients: ["Fish", "Vinegar", "Garlic", "Ginger", "Eggplant"] },
-    { name: "Pork Giniling", type: "lunch", tags: ["high-protein", "any"], costPerServing: 65, calories: "320 kcal", prepTime: "30 mins", method: "Sauté", ingredients: ["Ground Pork", "Potatoes", "Carrots", "Tomato Sauce"] },
-
-    // 🍛 Dinners
-    { name: "Pinakbet", type: "dinner", tags: ["vegetarian", "healthy", "any"], costPerServing: 45, calories: "180 kcal", prepTime: "30 mins", method: "Sauté", ingredients: ["Squash", "String beans", "Bitter gourd", "Bagoong"] },
+    { name: "Pinakbet", type: "dinner", tags: ["vegetarian", "healthy", "any"], costPerServing: 45, calories: "180 kcal", prepTime: "30 mins", method: "Sauté", ingredients: ["Squash", "String beans", "Bitter gourd", "Bagoong (Shrimp paste)"] },
     { name: "Adobong Kangkong", type: "dinner", tags: ["vegetarian", "healthy", "any"], costPerServing: 25, calories: "120 kcal", prepTime: "15 mins", method: "Sauté", ingredients: ["Kangkong", "Soy sauce", "Vinegar", "Garlic"] },
     { name: "Grilled Tilapia", type: "dinner", tags: ["healthy", "high-protein", "any"], costPerServing: 60, calories: "200 kcal", prepTime: "25 mins", method: "Grill", ingredients: ["Tilapia", "Tomatoes", "Onions", "Salt"] },
-    { name: "Bistek Tagalog", type: "dinner", tags: ["high-protein", "any"], costPerServing: 80, calories: "400 kcal", prepTime: "35 mins", method: "Marinate & Fry", ingredients: ["Beef strips", "Soy sauce", "Calamansi", "Onion"] },
-    { name: "Ginisang Ampalaya", type: "dinner", tags: ["vegetarian", "healthy", "any"], costPerServing: 35, calories: "160 kcal", prepTime: "20 mins", method: "Sauté", ingredients: ["Ampalaya", "Egg", "Tomatoes", "Garlic"] },
-    { name: "Chicken Afritada", type: "dinner", tags: ["high-protein", "any"], costPerServing: 75, calories: "340 kcal", prepTime: "45 mins", method: "Simmer", ingredients: ["Chicken", "Tomato Sauce", "Potatoes", "Bell Peppers"] },
-    { name: "Tokwa't Baboy", type: "dinner", tags: ["high-protein", "any"], costPerServing: 55, calories: "310 kcal", prepTime: "30 mins", method: "Fry & Mix", ingredients: ["Tofu", "Pork Belly", "Vinegar", "Soy Sauce", "Onion"] }
+    { name: "Bistek Tagalog", type: "dinner", tags: ["high-protein", "any"], costPerServing: 80, calories: "400 kcal", prepTime: "35 mins", method: "Marinate & Fry", ingredients: ["Beef strips", "Soy sauce", "Calamansi", "Onion rings"] }
 ];
 
-// --- 2. Utility: Shuffle Array ---
-function shuffleArray(array) {
-    let shuffled = [...array]; 
-    for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
-    return shuffled;
-}
-
-// --- 3. Theme Toggle ---
+// --- Theme Toggle ---
 const themeBtn = document.getElementById('theme-toggle');
 themeBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
@@ -49,10 +23,11 @@ themeBtn.addEventListener('click', () => {
     }
 });
 
-// --- 4. Core Logic ---
+// --- App Logic ---
 document.getElementById('planner-form').addEventListener('submit', function(e) {
     e.preventDefault();
     
+    // Get Inputs
     const people = parseInt(document.getElementById('people').value);
     const dailyBudget = parseFloat(document.getElementById('budget').value);
     const dietPreference = document.getElementById('diet').value;
@@ -63,38 +38,27 @@ document.getElementById('planner-form').addEventListener('submit', function(e) {
 function generateMealPlan(people, dailyBudget, diet) {
     const resultsSection = document.getElementById('results');
     const mealGrid = document.getElementById('meal-grid');
-    mealGrid.innerHTML = ''; 
+    mealGrid.innerHTML = ''; // Clear old results
 
     let totalDailyCost = 0;
     const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
-    let availableBreakfasts = recipeDB.filter(r => r.type === "breakfast" && r.tags.includes(diet));
-    let availableLunches = recipeDB.filter(r => r.type === "lunch" && r.tags.includes(diet));
-    let availableDinners = recipeDB.filter(r => r.type === "dinner" && r.tags.includes(diet));
-
-    if(availableBreakfasts.length < 7) availableBreakfasts = recipeDB.filter(r => r.type === "breakfast");
-    if(availableLunches.length < 7) availableLunches = recipeDB.filter(r => r.type === "lunch");
-    if(availableDinners.length < 7) availableDinners = recipeDB.filter(r => r.type === "dinner");
-
-    const weeklyBreakfasts = shuffleArray(availableBreakfasts).slice(0, 7);
-    const weeklyLunches = shuffleArray(availableLunches).slice(0, 7);
-    const weeklyDinners = shuffleArray(availableDinners).slice(0, 7);
-
-    days.forEach((day, index) => {
-        const b = weeklyBreakfasts[index];
-        const l = weeklyLunches[index];
-        const d = weeklyDinners[index];
+    // Generate 7 days
+    days.forEach(day => {
+        const dayPlan = getDailyMeals(diet);
         
-        const dayCost = (b.costPerServing + l.costPerServing + d.costPerServing) * people;
-        if(day === "Monday") totalDailyCost = dayCost; 
+        // Calculate cost for this day based on number of people
+        const dayCost = (dayPlan.breakfast.costPerServing + dayPlan.lunch.costPerServing + dayPlan.dinner.costPerServing) * people;
+        if(day === "Monday") totalDailyCost = dayCost; // Use Day 1 to estimate average daily cost
 
+        // Create HTML for the day
         const dayHTML = `
             <div class="day-card">
                 <h4 class="day-title">${day}</h4>
                 <div class="meals-wrapper">
-                    ${renderMeal('Breakfast', b, people)}
-                    ${renderMeal('Lunch', l, people)}
-                    ${renderMeal('Dinner', d, people)}
+                    ${renderMeal('Breakfast', dayPlan.breakfast, people)}
+                    ${renderMeal('Lunch', dayPlan.lunch, people)}
+                    ${renderMeal('Dinner', dayPlan.dinner, people)}
                 </div>
             </div>
         `;
@@ -106,7 +70,25 @@ function generateMealPlan(people, dailyBudget, diet) {
     resultsSection.scrollIntoView({ behavior: 'smooth' });
 }
 
-// --- 5. Render Helper ---
+function getDailyMeals(diet) {
+    // Filter database based on diet selection
+    const availableBreakfasts = recipeDB.filter(r => r.type === "breakfast" && r.tags.includes(diet));
+    const availableLunches = recipeDB.filter(r => r.type === "lunch" && r.tags.includes(diet));
+    const availableDinners = recipeDB.filter(r => r.type === "dinner" && r.tags.includes(diet));
+
+    // Fallback if filter is too strict
+    const b = availableBreakfasts.length > 0 ? availableBreakfasts : recipeDB.filter(r => r.type === "breakfast");
+    const l = availableLunches.length > 0 ? availableLunches : recipeDB.filter(r => r.type === "lunch");
+    const d = availableDinners.length > 0 ? availableDinners : recipeDB.filter(r => r.type === "dinner");
+
+    // Random selection
+    return {
+        breakfast: b[Math.floor(Math.random() * b.length)],
+        lunch: l[Math.floor(Math.random() * l.length)],
+        dinner: d[Math.floor(Math.random() * d.length)]
+    };
+}
+
 function renderMeal(type, recipe, people) {
     const totalCost = recipe.costPerServing * people;
     return `
@@ -122,7 +104,6 @@ function renderMeal(type, recipe, people) {
     `;
 }
 
-// --- 6. Budget Calculator ---
 function updateBudgetCalculator(budget, estCost) {
     document.getElementById('calc-daily-budget').innerText = `₱${budget.toFixed(2)}`;
     document.getElementById('calc-daily-cost').innerText = `₱${estCost.toFixed(2)}`;
@@ -131,10 +112,11 @@ function updateBudgetCalculator(budget, estCost) {
     const remainingEl = document.getElementById('calc-remaining');
     remainingEl.innerText = `₱${remaining.toFixed(2)}`;
     
+    // Turn red if over budget
     if(remaining < 0) {
         remainingEl.style.color = "red";
     } else {
-        remainingEl.style.color = "var(--secondary-color)";
+        remainingEl.style.color = "var(--secondary-color)"; // Reset
     }
 
     document.getElementById('calc-weekly-cost').innerText = `₱${(estCost * 7).toFixed(2)}`;
